@@ -1,0 +1,80 @@
+
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: labs-root
+  #namespace: default
+  description: Overall organisation parent group
+spec:
+  type: root
+  profile:
+    displayName: Labs Top Level Group
+  children: [labs-crew]
+
+---
+
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: labs-crew
+  #namespace: default
+  description: Team focused on the Labs system
+spec:
+  type: team
+  profile:
+    displayName: Labs Crew
+  parent: labs-org
+  children: []
+
+
+---
+
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: manager-a
+#  namespace: default
+spec:
+  profile:
+    displayName: Labs Manager A
+  memberOf: [labs-crew]
+
+---
+
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: developer-a
+#  namespace: default
+spec:
+  profile:
+    displayName: Labs Developer Dude A
+  memberOf: [labs-crew]
+
+---
+
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: developer-b
+#  namespace: default
+spec:
+  profile:
+    displayName: Labs Developer Dude B
+  memberOf: [labs-crew]
+
+---
+
+
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: developer-c
+#  namespace: default
+spec:
+  profile:
+    displayName: Labs Developer Dude C
+  memberOf: [labs-crew]
+
+---
