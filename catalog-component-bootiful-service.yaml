@@ -4,14 +4,13 @@ apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
   name: bootiful-service
-  namespace: delta
   description: API for customers
   tags:
     - java
     - spring-boot
     - web
   annotations:
-    backstage.io/kubernetes-label-selector: 'app.kubernetes.io/part-of=bootiful-spring-boot-3,component=service'
+    backstage.io/kubernetes-label-selector: 'app.kubernetes.io/part-of=bootiful-spring-boot-3'
 spec:
   type: service
   lifecycle: experimental
