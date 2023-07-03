@@ -15,5 +15,7 @@ spec:
   type: service
   lifecycle: experimental
   owner: group:labs-crew
+  dependsOn:
+    - component:bootiful-service
   providesApis:
     - bootiful-client.demo.apps.labs.tanzu.rocks
