@@ -3,17 +3,17 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: bootiful-service
+  name: bootiful-client
   description: API for customers
   tags:
     - java
     - spring-boot
     - web
   annotations:
-    backstage.io/kubernetes-label-selector: 'app.kubernetes.io/part-of=bootiful-service'
+    backstage.io/kubernetes-label-selector: 'app.kubernetes.io/part-of=bootiful-client'
 spec:
   type: service
   lifecycle: experimental
   owner: group:labs-crew
   providesApis:
-    - bootiful-service.demo.apps.labs.tanzu.rocks
+    - bootiful-client.demo.apps.labs.tanzu.rocks
