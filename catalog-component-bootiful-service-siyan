@@ -1,0 +1,19 @@
+
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: bootiful-service-siyan
+  description: Siyan's API for customers
+  tags:
+    - java
+    - spring-boot
+    - web
+  annotations:
+    backstage.io/kubernetes-label-selector: 'app.kubernetes.io/part-of=bootiful-service-siyan'
+spec:
+  type: service
+  lifecycle: experimental
+  owner: group:labs-crew
+  providesApis:
+    - bootiful-service-siyan.echo.apps.labs.tanzu.rocks
